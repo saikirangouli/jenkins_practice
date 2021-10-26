@@ -8,9 +8,10 @@ pipeline {
                 echo "no need to build the python code"
             }
         }
-        stage("Unit test")
+        stage("Unit test") {
             steps {
                 sh "python Test.py"
             }
+        }
     }
 }
