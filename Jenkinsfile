@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    triggers {
+        pollSCM('* * * * *')
+        cron('0 0 * * *')
+    }
    
     //agent { docker {image 'python:3.7.2'}}
     stages {
